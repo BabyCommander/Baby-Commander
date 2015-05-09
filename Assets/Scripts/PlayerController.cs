@@ -55,9 +55,12 @@ public class PlayerController : MonoBehaviour {
 			if(weapon.weapon != null)
 			{
 				if (this.weapon.weapon != null & WeaponSpawn != null) {
-					Instantiate(this.weapon.weapon.gameObject.GetComponent<WeaponController>().ammotype, WeaponSpawn.transform.position, WeaponSpawn.transform.rotation);
-				//ShootController tmp = this.weapon.weapon.gameObject.GetComponent<ShootController>();
-				//tmp.shoot(WeaponSpawn.transform.position);
+					if (weapon.ammo != 0)
+					{
+						Instantiate(this.weapon.weapon.gameObject.GetComponent<WeaponController>().ammotype, WeaponSpawn.transform.position, WeaponSpawn.transform.rotation);
+						this.weapon.ammo--;
+					}
+					
 				}
 			}
 				//fire
