@@ -1,0 +1,242 @@
+fileFormatVersion: 2
+guid: e96f0d0a6fc4a2d4d84244b301ad0741
+timeCreated: 1431203949
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Baby-walk_0
+    21300002: Baby-walk_1
+    21300004: Baby-walk_2
+    21300006: Baby-walk_3
+    21300008: Baby-walk_4
+    21300010: Baby-walk_5
+    21300012: Baby-walk_6
+    21300014: Baby-walk_7
+    21300016: Baby-walk_8
+    21300018: Baby-walk_9
+    21300020: Baby-walk_10
+    21300022: Baby-walk_11
+    21300024: Baby-walk_12
+    21300026: Baby-walk_13
+    21300028: Baby-walk_14
+    21300030: Baby-walk_15
+    21300032: Baby-walk_16
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Baby-walk_0
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 11
+        width: 77
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Baby-walk_1
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 11
+        width: 76
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Baby-walk_2
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 11
+        width: 76
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Baby-walk_3
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 11
+        width: 75
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Baby-walk_4
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 11
+        width: 75
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Baby-walk_5
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 11
+        width: 75
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Baby-walk_6
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 11
+        width: 76
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Baby-walk_7
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 11
+        width: 76
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Baby-walk_8
+      rect:
+        serializedVersion: 2
+        x: 885
+        y: 11
+        width: 77
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Baby-walk_9
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 11
+        width: 77
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Baby-walk_10
+      rect:
+        serializedVersion: 2
+        x: 1105
+        y: 11
+        width: 77
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Baby-walk_11
+      rect:
+        serializedVersion: 2
+        x: 1215
+        y: 11
+        width: 77
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Baby-walk_12
+      rect:
+        serializedVersion: 2
+        x: 1325
+        y: 11
+        width: 77
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Baby-walk_13
+      rect:
+        serializedVersion: 2
+        x: 1435
+        y: 11
+        width: 77
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Baby-walk_14
+      rect:
+        serializedVersion: 2
+        x: 1545
+        y: 11
+        width: 77
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Baby-walk_15
+      rect:
+        serializedVersion: 2
+        x: 1655
+        y: 11
+        width: 77
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Baby-walk_16
+      rect:
+        serializedVersion: 2
+        x: 1765
+        y: 11
+        width: 77
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
