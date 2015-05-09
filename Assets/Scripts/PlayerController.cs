@@ -5,11 +5,12 @@ using System.Collections;
 public class Weapon
 {
 	public GameObject weapon;
-	public int life = 5;
+	public int ammo = 5;
+	public float fireRate = 1; 
 
 	void shoot()
 	{
-
+		ammo--;
 	}
 
 }
@@ -24,7 +25,7 @@ public class PlayerController : MonoBehaviour {
 	public GameObject gun;
 
 	private bool facingRight = true;
-
+	private float offset_weaponplayer;
 	public Animator anim;
 
 	private Rigidbody2D player_rb;
@@ -34,6 +35,7 @@ public class PlayerController : MonoBehaviour {
 	void Start () {
 		player_rb = this.GetComponent<Rigidbody2D>();
 		anim = GetComponent<Animator>();
+		offset_weaponplayer = this.transform.position.x - WeaponSpawn.transform.position.x;
 	}
 	
 	// Update is called once per frame
@@ -66,6 +68,12 @@ public class PlayerController : MonoBehaviour {
 			moveX = Input.GetAxis("Horizontal");
 		anim.SetFloat("speed", move);
 
+		 anim.SetBool("haveItem", false);
+		//if(weapon.ammo == 0)
+		//    anim.SetBool("haveItem", false);
+		//else
+		//    anim.SetBool("haveItem", true);
+
 		if (moveX > 0 && !facingRight)
 		{
 			Flip();
@@ -83,6 +91,9 @@ public class PlayerController : MonoBehaviour {
 		Vector2 theScale = transform.localScale;
 		theScale.x *= -1;
 		transform.localScale = theScale;
+
+	//gun.transform.localScale = theScale * -1;
+		
 	}
 
 
@@ -92,9 +103,9 @@ public class PlayerController : MonoBehaviour {
 		{
 			Debug.Log(gun);
 			Debug.Log(WeaponSpawn);
-			Instantiate(gun, WeaponSpawn.transform.position, WeaponSpawn.transform.rotation);
+		//	 gun = (GameObject)Instantiate(gun, WeaponSpawn.transform.position, WeaponSpawn.transform.rotation);
 			//gun.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
-			weapon.life = 5;
+			weapon.ammo = 5;
 		}
 	}
 
