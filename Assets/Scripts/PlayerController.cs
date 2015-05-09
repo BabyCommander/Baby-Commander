@@ -22,21 +22,18 @@ public class PlayerController : MonoBehaviour {
 	public float speed;
 
 	public GameObject WeaponSpawn;
-	public Weapon weapon;
 	public GameObject gun;
+	public Weapon weapon;
 
 	private bool facingRight = true;
-	private float offset_weaponplayer;
 	public Animator anim;
 
-	private Rigidbody2D player_rb;
 	private float nextJump;
 
 	private GameObject gun2;
 
 	// Use this for initialization
 	void Start () {
-		player_rb = this.GetComponent<Rigidbody2D>();
 		weapon = new Weapon();
 		anim = GetComponent<Animator>();
 	}
@@ -53,9 +50,17 @@ public class PlayerController : MonoBehaviour {
 			nextJump = Time.time;
 		}
 
-		if (Input.GetMouseButtonDown(0))
-		{
-			//fire
+		if (Input.GetMouseButtonDown(0) )
+		{   
+			if(weapon.weapon != null)
+			{
+				if (this.weapon.weapon != null & WeaponSpawn != null) {
+					Instantiate(this.weapon.weapon.gameObject.GetComponent<WeaponController>().ammotype, WeaponSpawn.transform.position, WeaponSpawn.transform.rotation);
+				//ShootController tmp = this.weapon.weapon.gameObject.GetComponent<ShootController>();
+				//tmp.shoot(WeaponSpawn.transform.position);
+				}
+			}
+				//fire
 		}
 
 
@@ -88,21 +93,22 @@ public class PlayerController : MonoBehaviour {
 	void FixedUpdate()
 	{
 
-        //Vector2 movement = new Vector2(Input.GetAxis("Horizontal") * -1 * speed, 0f);
+		//Vector2 movement = new Vector2(Input.GetAxis("Horizontal") * -1 * speed, 0f);
 
-        float move = Mathf.Abs(Input.GetAxis("Horizontal")),
-            moveX = Input.GetAxis("Horizontal");
+		float move = Mathf.Abs(Input.GetAxis("Horizontal")),
+			moveX = Input.GetAxis("Horizontal");
 
-        //if (Time.time >= nextJump + 0.75)
-        //{
-        //    this.transform.Translate(new Vector2(0f, Input.GetAxis("Vertical") * 2));
-        //    nextJump = Time.time;
-        //}
+		//if (Time.time >= nextJump + 0.75)
+		//{
+		//    this.transform.Translate(new Vector2(0f, Input.GetAxis("Vertical") * 2));
+		//    nextJump = Time.time;
+		//}
 
-        if (Input.GetMouseButtonDown(0))
-        {
-            //fire
-        }
+		if (Input.GetMouseButtonDown(0))
+		{
+			//Instantiate()
+			//fire
+		}
 		
 		anim.SetFloat("speed", move);
 
@@ -128,13 +134,13 @@ public class PlayerController : MonoBehaviour {
 		}
 
 
-        if (weapon != null)
-            if (weapon.weapon != null)
-            {
-                weapon.weapon.transform.position = WeaponSpawn.transform.position;
-            }
+		if (weapon != null)
+			if (weapon.weapon != null)
+			{
+				weapon.weapon.transform.position = WeaponSpawn.transform.position;
+			}
 
-       // this.transform.Translate(movement);
+	   // this.transform.Translate(movement);
 
 
 	}
@@ -145,10 +151,10 @@ public class PlayerController : MonoBehaviour {
 		Vector2 theScale = transform.localScale;
 		theScale.x *= -1;
 		transform.localScale = theScale;
-        theScale = weapon.weapon.transform.localScale;
-        theScale.x *= -1;
-       // theScale.y *= -1;
-        weapon.weapon.transform.localScale = theScale;
+		theScale = weapon.weapon.transform.localScale;
+		theScale.x *= -1;
+	   // theScale.y *= -1;
+		weapon.weapon.transform.localScale = theScale;
 		
 	}
 
@@ -159,12 +165,17 @@ public class PlayerController : MonoBehaviour {
 		{
 			Debug.Log(gun);
 			Debug.Log(WeaponSpawn);
+			Destroy(weapon.weapon);
 			weapon.weapon = (GameObject)Instantiate(gun, WeaponSpawn.transform.position, WeaponSpawn.transform.rotation);
-            weapon.weapon.transform.localScale = new Vector3(0.4f, 0.4f, 0.4f);
-            Vector2 theScale;
-            theScale = weapon.weapon.transform.localScale;
-            theScale.x *= -1;
-            weapon.weapon.transform.localScale = theScale;
+			weapon.weapon.transform.localScale = new Vector3(0.4f, 0.4f, 0.4f);
+
+
+			if (facingRight) { 
+				Vector2 theScale;
+				theScale = weapon.weapon.transform.localScale;
+				theScale.x *= -1;
+				weapon.weapon.transform.localScale = theScale;
+			}
 
 			//gun.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
 			weapon.ammo = 5;

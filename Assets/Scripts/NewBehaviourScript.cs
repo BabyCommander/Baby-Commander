@@ -1,10 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class WeaponController : MonoBehaviour {
-
-	public GameObject player;
-	public GameObject ammotype;
+public class NewBehaviourScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -15,7 +12,4 @@ public class WeaponController : MonoBehaviour {
 	void Update () {
 	
 	}
-
-
-  
 }
