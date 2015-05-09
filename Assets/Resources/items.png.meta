@@ -1,9 +1,14 @@
 fileFormatVersion: 2
 guid: 21b4d17f8165b53418acc4f16f9a82b3
-timeCreated: 1431182606
+timeCreated: 1431186318
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: Present
+    21300002: Watergun
+    21300004: Ball
+    21300006: Milk_Empty
+    21300008: Milk_Full
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -30,14 +35,14 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -48,7 +53,57 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: Present
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 939
+        width: 117
+        height: 144
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Watergun
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 761
+        width: 174
+        height: 137
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Ball
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 575
+        width: 135
+        height: 135
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Milk_Empty
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 297
+        width: 115
+        height: 240
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Milk_Full
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 24
+        width: 115
+        height: 240
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
   assetBundleName: 

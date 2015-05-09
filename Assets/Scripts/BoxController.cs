@@ -3,12 +3,16 @@ using System.Collections;
 
 public class BoxController : MonoBehaviour {
 
-    public GameObject lootWindow;
+	public GameObject lootWindow;
+	public Sprite Item;//GameObject Item;
+	
+	//sonst zu schnell mit der steuerung
+	private float nextOpenTime;
 
 	// Use this for initialization
 	void Start () {
 
-        lootWindow.SetActive(false);
+		lootWindow.SetActive(false);
 	}
 	
 	// Update is called once per frame
@@ -19,26 +23,30 @@ public class BoxController : MonoBehaviour {
 
 	void OnTriggerStay2D(Collider2D other)
 	{
+		if (other.tag == "Player")
+		{
 
+			if (Input.GetKey(KeyCode.E))
+			{
+				if (lootWindow.tag == "Loot" && (Time.time >= nextOpenTime + 0.5))
+				{
+					lootWindow.SetActive(!lootWindow.activeSelf);
+					nextOpenTime = Time.time;
+				}
 
-
-
-        if (other.tag == "Player")
-        {
-
-            if (Input.GetKey(KeyCode.E))
-            {
-                if (lootWindow.tag == "Loot")
-                {
-                    lootWindow.SetActive(!lootWindow.activeSelf);
-                }
-
-            }
-        }
-
-   //     other.attachedRigidbody.AddForce(new Vector2(200, 200));
-
+			}
+		}
 
 	}
+
+
+	void OnTriggerExit2D(Collider2D other)
+	{
+		if (other.tag == "Player")
+		{     
+					lootWindow.SetActive(false); 
+		}
+	}
+
 
 }
