@@ -1,0 +1,165 @@
+fileFormatVersion: 2
+guid: 081c44fbb39636644a1a137d7b55f746
+timeCreated: 1431211365
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: angry-mom_0
+    21300002: angry-mom_1
+    21300004: angry-mom_2
+    21300006: angry-mom_3
+    21300008: angry-mom_4
+    21300010: angry-mom_5
+    21300012: angry-mom_6
+    21300014: angry-mom_7
+    21300016: angry-mom_8
+    21300018: angry-mom_9
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: angry-mom_0
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 45
+        width: 361
+        height: 393
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: angry-mom_1
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 45
+        width: 371
+        height: 399
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: angry-mom_2
+      rect:
+        serializedVersion: 2
+        x: 829
+        y: 45
+        width: 377
+        height: 393
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: angry-mom_3
+      rect:
+        serializedVersion: 2
+        x: 1237
+        y: 45
+        width: 382
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: angry-mom_4
+      rect:
+        serializedVersion: 2
+        x: 1656
+        y: 45
+        width: 386
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: angry-mom_5
+      rect:
+        serializedVersion: 2
+        x: 2086
+        y: 45
+        width: 389
+        height: 397
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: angry-mom_6
+      rect:
+        serializedVersion: 2
+        x: 2517
+        y: 45
+        width: 386
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: angry-mom_7
+      rect:
+        serializedVersion: 2
+        x: 2967
+        y: 45
+        width: 382
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: angry-mom_8
+      rect:
+        serializedVersion: 2
+        x: 3409
+        y: 45
+        width: 377
+        height: 393
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: angry-mom_9
+      rect:
+        serializedVersion: 2
+        x: 3843
+        y: 45
+        width: 369
+        height: 399
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

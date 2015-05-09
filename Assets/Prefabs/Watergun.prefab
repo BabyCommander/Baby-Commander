@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 410384}
   - 212: {fileID: 21251386}
   - 50: {fileID: 5009654}
+  - 114: {fileID: 11459168}
   m_Layer: 0
   m_Name: Watergun
   m_TagString: Untagged
@@ -44,6 +45,19 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+--- !u!114 &11459168
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 165430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f1c4ed2b50e1084c87ccbfae3a5e427, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  ammotype: {fileID: 136248, guid: 95f7c0a69fc1bfb4ca9e78ebb885eed4, type: 2}
 --- !u!212 &21251386
 SpriteRenderer:
   m_ObjectHideFlags: 1
