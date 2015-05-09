@@ -3,12 +3,12 @@ using System.Collections;
 
 public class BoxController : MonoBehaviour {
 
-    public GameObject loot;
+    public GameObject lootWindow;
 
 	// Use this for initialization
 	void Start () {
 
-        loot.SetActive(false);
+        lootWindow.SetActive(false);
 	}
 	
 	// Update is called once per frame
@@ -17,21 +17,28 @@ public class BoxController : MonoBehaviour {
 
 
 
-	void OnCollisionStay2D(Collision2D coll)
+	void OnTriggerStay2D(Collider2D other)
 	{
-		
-		if (coll.gameObject.tag == "Player")
-		{
-            
-			    if (Input.GetKey(KeyCode.E))
-			    {
-                    if(loot.tag == "Loot")
-                    {
-                        loot.SetActive(true);
-                    }
 
-			    }
-		}
+
+
+
+        if (other.tag == "Player")
+        {
+
+            if (Input.GetKey(KeyCode.E))
+            {
+                if (lootWindow.tag == "Loot")
+                {
+                    lootWindow.SetActive(!lootWindow.activeSelf);
+                }
+
+            }
+        }
+
+   //     other.attachedRigidbody.AddForce(new Vector2(200, 200));
+
+
 	}
 
 }
