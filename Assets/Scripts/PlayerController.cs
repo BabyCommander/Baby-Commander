@@ -103,7 +103,7 @@ public class PlayerController : MonoBehaviour {
 		{
 			Debug.Log(gun);
 			Debug.Log(WeaponSpawn);
-		//	 gun = (GameObject)Instantiate(gun, WeaponSpawn.transform.position, WeaponSpawn.transform.rotation);
+			gun = (GameObject)Instantiate(gun, WeaponSpawn.transform.position, WeaponSpawn.transform.rotation);
 			//gun.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
 			weapon.ammo = 5;
 		}
