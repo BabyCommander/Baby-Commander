@@ -1,0 +1,242 @@
+fileFormatVersion: 2
+guid: 608689efe6d7a1e46b24cb9241b2daff
+timeCreated: 1431203913
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Baby-act-walk_0
+    21300002: Baby-act-walk_1
+    21300004: Baby-act-walk_2
+    21300006: Baby-act-walk_3
+    21300008: Baby-act-walk_4
+    21300010: Baby-act-walk_5
+    21300012: Baby-act-walk_6
+    21300014: Baby-act-walk_7
+    21300016: Baby-act-walk_8
+    21300018: Baby-act-walk_9
+    21300020: Baby-act-walk_10
+    21300022: Baby-act-walk_11
+    21300024: Baby-act-walk_12
+    21300026: Baby-act-walk_13
+    21300028: Baby-act-walk_14
+    21300030: Baby-act-walk_15
+    21300032: Baby-act-walk_16
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Baby-act-walk_0
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 13
+        width: 92
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Baby-act-walk_1
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 13
+        width: 91
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Baby-act-walk_2
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 13
+        width: 93
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Baby-act-walk_3
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 13
+        width: 93
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Baby-act-walk_4
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 13
+        width: 93
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Baby-act-walk_5
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 13
+        width: 93
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Baby-act-walk_6
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 13
+        width: 93
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Baby-act-walk_7
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 13
+        width: 91
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Baby-act-walk_8
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 13
+        width: 92
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Baby-act-walk_9
+      rect:
+        serializedVersion: 2
+        x: 998
+        y: 13
+        width: 92
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Baby-act-walk_10
+      rect:
+        serializedVersion: 2
+        x: 1108
+        y: 13
+        width: 92
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Baby-act-walk_11
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 13
+        width: 92
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Baby-act-walk_12
+      rect:
+        serializedVersion: 2
+        x: 1328
+        y: 13
+        width: 92
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Baby-act-walk_13
+      rect:
+        serializedVersion: 2
+        x: 1438
+        y: 13
+        width: 92
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Baby-act-walk_14
+      rect:
+        serializedVersion: 2
+        x: 1548
+        y: 13
+        width: 92
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Baby-act-walk_15
+      rect:
+        serializedVersion: 2
+        x: 1658
+        y: 13
+        width: 92
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Baby-act-walk_16
+      rect:
+        serializedVersion: 2
+        x: 1768
+        y: 13
+        width: 92
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
