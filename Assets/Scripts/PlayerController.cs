@@ -192,7 +192,7 @@ public class PlayerController : MonoBehaviour
         {
             Instantiate(helmet,coll.transform.position, coll.transform.rotation);
             Destroy(coll.gameObject);
-            Application.LoadLevel("Menue");
+           // Application.LoadLevel("Menue");
         }
 
         Debug.Log("Collision: " + coll.gameObject.tag);
