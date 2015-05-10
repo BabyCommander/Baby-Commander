@@ -712,8 +712,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c6ed3c46e5dd9746ae708dcf57c40ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 4
+  life: 0
   Loot: {fileID: 118778, guid: 86f347ab10728634c94214554715f3a8, type: 2}
+  ms2: {fileID: 0}
 --- !u!1 &1350929743
 GameObject:
   m_ObjectHideFlags: 0
@@ -1810,9 +1811,10 @@ MonoBehaviour:
   gun: {fileID: 165430, guid: a0e627e643e689b4c893117ec066a254, type: 2}
   WaterShot: {fileID: 199726, guid: dd92bcc897f56294d85ecc549a84097c, type: 2}
   helmet: {fileID: 186588, guid: 18d64960f8b50174a9dd6bc0f339ff39, type: 2}
+  doodle: {fileID: 0}
+  msuccess1: {fileID: 0}
   helmetSprite: {fileID: 21300000, guid: 7704b1cb6d449ba4bb6875b5aa09becd, type: 3}
   WeaponSprite: {fileID: 21300002, guid: 21b4d17f8165b53418acc4f16f9a82b3, type: 3}
-  health: 0
 --- !u!212 &2026865286
 SpriteRenderer:
   m_ObjectHideFlags: 0
