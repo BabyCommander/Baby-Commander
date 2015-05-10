@@ -43,12 +43,14 @@ public class PlayerController : MonoBehaviour
 
     private SpriteRenderer[] bag;
     private bool hasWeapon;
+    private bool hashelmet;
 
     // Use this for initialization
     void Start()
     {
         bag = new SpriteRenderer[2];
         hasWeapon = false;
+        hashelmet = false;
         weapon = new Weapon();
         anim = GetComponent<Animator>();
     }
@@ -56,7 +58,9 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         Vector2 movement = new Vector2(Input.GetAxis("Horizontal") * -1 * speed, 0f);
+
 
         if (Time.time >= nextJump + 0.75)
         {
@@ -64,27 +68,56 @@ public class PlayerController : MonoBehaviour
             nextJump = Time.time;
         }
 
-        int dir=1;
-        if (!facingRight)
-        {
-            dir = -1;
-        }
-
         if (Input.GetMouseButtonDown(0))
         {
+            //if (weapon.weapon != null)
+            //{
+            //    if (this.weapon.weapon != null & WeaponSpawn != null)
+            //    {
+            //        if (weapon.ammo != 0)
+            //        {
+            //            Instantiate(this.WaterShot, WeaponSpawn.transform.position, WeaponSpawn.transform.rotation);
+            //            this.weapon.ammo--;
+            //        }
+
+            //    }
+            //}
+
             if(hasWeapon)
             {
                 if(weapon.ammo != 0)
                 {
-
-                    Quaternion g = WeaponSpawn.transform.rotation;
-                    Quaternion h = new Quaternion(WeaponSpawn.transform.rotation.x, WeaponSpawn.transform.rotation.y, WeaponSpawn.transform.rotation.z, dir * WeaponSpawn.transform.rotation.w);
-                    Instantiate(this.WaterShot, WeaponSpawn.transform.position, h);
+                    Instantiate(this.WaterShot, WeaponSpawn.transform.position, WeaponSpawn.transform.rotation);
                     this.weapon.ammo--;
                 }
-            }       
+
+            }
+            
         }
-   
+
+
+        float move = Mathf.Abs(Input.GetAxis("Horizontal")),
+            moveX = Input.GetAxis("Horizontal");
+
+        if (moveX > 0 && !facingRight)
+        {
+         //   Flip();
+
+            //if (weapon != null)
+            //    if (weapon.weapon != null)
+            //        weapon.weapon.transform.Translate(new Vector2(movement.x + 8 * 20, movement.y));
+        }
+        else if (moveX < 0 && facingRight)
+        {
+        //    Flip();
+
+            //if (weapon != null)
+            //    if (weapon.weapon != null)
+            //        weapon.weapon.transform.Translate(new Vector2(movement.x - 8 * 20, movement.y));
+        }
+
+
+        
         this.transform.Translate(movement);
     }
 
@@ -110,12 +143,21 @@ public class PlayerController : MonoBehaviour
 
         if (moveX > 0 && !facingRight)
         {
-            Flip();
+          //  Flip();
         }
         else if (moveX < 0 && facingRight)
         {
-            Flip();
+         //   Flip();
         }
+
+
+        //if (weapon != null)
+        //    if (weapon.weapon != null)
+        //    {
+        //        weapon.weapon.transform.position = WeaponSpawn.transform.position;
+        //    }
+
+
 
     }
 
@@ -125,6 +167,11 @@ public class PlayerController : MonoBehaviour
         Vector2 theScale = transform.localScale;
         theScale.x *= -1;
         transform.localScale = theScale;
+        //theScale = //weapon.weapon.transform.localScale;
+        //theScale.x *= -1;
+        // theScale.y *= -1;
+        // weapon.weapon.transform.localScale = theScale;
+
     }
 
 
@@ -134,25 +181,39 @@ public class PlayerController : MonoBehaviour
         {
             Destroy(weapon.weapon);
 
-            if(!hasWeapon)
+            if(bag != null)
+                bag = this.gameObject.GetComponentsInChildren<SpriteRenderer>();
+
+            for (int i = 0; i < 2; i++)
             {
-                if(bag != null)
-                    bag = this.gameObject.GetComponentsInChildren<SpriteRenderer>();
-
-                for (int i = 0; i < 3; i++)
+                Debug.Log(bag[i].gameObject.tag);
+                if (((SpriteRenderer)bag[i]).tag == "WeaponSpawn")
                 {
-                    Debug.Log("Fuck Weapon Spawn");
-                    if (((SpriteRenderer)bag[i]).tag == "WeaponSpawn")
-                    {
-                        Debug.Log(bag[i].gameObject.tag);
+                    Debug.Log(bag[i].gameObject.tag);
 
-                        bag[i].GetComponent<SpriteRenderer>().sprite = WeaponSprite;
-                        hasWeapon = true;
-                    }
+                    bag[i].GetComponent<SpriteRenderer>().sprite = WeaponSprite;
+                    hasWeapon = true;
                 }
             }
 
-            weapon.ammo = 50;
+
+
+
+
+            //weapon.weapon = (GameObject)Instantiate(gun, WeaponSpawn.transform.position, WeaponSpawn.transform.rotation);
+            //weapon.weapon.transform.localScale = new Vector3(0.4f, 0.4f, 0.4f);
+
+
+            //if (facingRight)
+            //{
+            //    Vector2 theScale;
+            //    theScale = weapon.weapon.transform.localScale;
+            //    theScale.x *= -1;
+            //    weapon.weapon.transform.localScale = theScale;
+            //}
+
+            //gun.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+            weapon.ammo = 5;
         }
     }
 
@@ -164,23 +225,20 @@ public class PlayerController : MonoBehaviour
             Destroy(coll.gameObject);
         }
 
-        Debug.Log("Collision: " + coll.gameObject.tag);
         if (coll.gameObject.tag == "Helmet")
         {
-            Debug.Log("Helmet found ");
             Destroy(coll.gameObject);
 
             if (bag != null)
                 bag = this.gameObject.GetComponentsInChildren<SpriteRenderer>();
-            
-            for (int i = 0; i < 3;i++ )
+
+            for (int i = 0; i < 2;i++ )
             {
                 Debug.Log(bag[i].gameObject.tag);
                 if (((SpriteRenderer)bag[i]).tag == "HelmetSpawn")
                 {
-                    Debug.Log("HelmetSprite");
+                    Debug.Log(bag[i].gameObject.tag);
                     bag[i].GetComponent<SpriteRenderer>().sprite = helmetSprite;
-              
                 }
             }
         }

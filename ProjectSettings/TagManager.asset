@@ -8,6 +8,11 @@ TagManager:
   - Loot
   - Image
   - Shot
+  - Wall
+  - Present
+  - Helmet
+  - HelmetSpawn
+  - WeaponSpawn
   layers:
   - Default
   - TransparentFX

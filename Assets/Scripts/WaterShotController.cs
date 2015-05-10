@@ -5,12 +5,21 @@ public class WaterShotController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		this.GetComponent<Rigidbody2D>().velocity = -10f * transform.right;
+        if (transform.rotation.w>0)
+        {
+            this.GetComponent<Rigidbody2D>().velocity = -10f * transform.right;
+          //  this.transform.rotation = new Quaternion(this.transform.rotation.x, -1* this.transform.rotation.y, this.transform.rotation.z, this.transform.rotation.w);
+        } else
+            this.GetComponent<Rigidbody2D>().velocity = 10f * transform.right;
+		
+        
+
+        Debug.Log(transform.rotation.x + "+++ y " + transform.rotation.y + "+++ w " + transform.rotation.w);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
+		this.GetComponent<Rigidbody2D>().velocity = this.GetComponent<Rigidbody2D>().velocity*1.01f;
 	}
 
 
@@ -19,7 +28,6 @@ public class WaterShotController : MonoBehaviour {
 		if(coll.gameObject.tag=="Wall")
 		{
 			Destroy(this.gameObject);
-			Debug.Log(coll.gameObject.tag);
 		}
 		
 	}

@@ -4,7 +4,7 @@ using System.Collections;
 public class EnemyScript : MonoBehaviour {
 
 	public int life;
-
+	public GameObject Loot;
 
 
 	// Use this for initialization
@@ -25,7 +25,12 @@ public class EnemyScript : MonoBehaviour {
 		{   
 
 			if(life < 1)
-			    Destroy(this.gameObject);
+			{
+				Instantiate(Loot, transform.position, transform.rotation);
+				Destroy(this.gameObject);
+
+			}
+				
 
 
 
