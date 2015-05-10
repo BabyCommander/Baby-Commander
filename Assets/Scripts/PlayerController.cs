@@ -56,7 +56,7 @@ public class PlayerController : MonoBehaviour
     {
         Vector2 movement = new Vector2(Input.GetAxis("Horizontal") * -1 * speed, 0f);
 
-        if (Time.time >= nextJump + 0.35)
+        if (Time.time >= nextJump + 0.75)
         {
             this.transform.Translate(new Vector2(0f, Input.GetAxis("Vertical") * 2));
             nextJump = Time.time;
