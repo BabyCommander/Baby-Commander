@@ -12,12 +12,15 @@ public class ChangeScene : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+	
+	}
+
+	void OnTriggerStay2D(Collider2D coll)
+	{
 		if (Input.GetKey(KeyCode.Return))
 			Application.LoadLevel("2level");
 
 	}
-
-
 
 	public void ChangeSzene (string level)
 	{

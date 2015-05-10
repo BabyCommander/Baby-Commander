@@ -12,7 +12,7 @@ Platform assembly: C:\Users\pwueller\Documents\Baby-Commander\Build\BabyCommande
 Loading C:\Users\pwueller\Documents\Baby-Commander\Build\BabyCommander_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
 Platform assembly: C:\Users\pwueller\Documents\Baby-Commander\Build\BabyCommander_Data\Managed\UnityEngine.UI.dll (this message is harmless)
 Loading C:\Users\pwueller\Documents\Baby-Commander\Build\BabyCommander_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-- Completed reload, in  0.041 seconds
+- Completed reload, in  0.042 seconds
 desktop: 1920x1080 59Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
@@ -24,10 +24,10 @@ Load Level1
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
 
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 5.267389 ms
+UnloadTime: 5.011225 ms
 
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 335.
-Total: 0.274124 ms (FindLiveObjects: 0.035067 ms CreateObjectMapping: 0.023948 ms MarkObjects: 0.207838 ms  DeleteObjects: 0.006842 ms)
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 345.
+Total: 0.361793 ms (FindLiveObjects: 0.045331 ms CreateObjectMapping: 0.035495 ms MarkObjects: 0.271559 ms  DeleteObjects: 0.008980 ms)
 
 Collision: Wall
  
@@ -61,10 +61,6 @@ Collision: Shot
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
 
-Collision: Shot
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
 0+++ y -3.258414E-07+++ w -1
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
@@ -106,18 +102,6 @@ Collision: Shot
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
 
 Collision: Shot
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-Collision: Shot
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-Collision: Wall
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-0+++ y -3.258414E-07+++ w -1
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
 
@@ -157,6 +141,18 @@ HelmetSprite
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
 
+Collision: Wall
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Collision: Wall
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Collision: Wall
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
 The referenced script on this Behaviour is missing!
  
 (Filename:  Line: 1560)
@@ -166,10 +162,74 @@ The referenced script on this Behaviour is missing!
 (Filename:  Line: 1713)
 
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.536703 ms
+UnloadTime: 0.952380 ms
 
-Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 312.
-Total: 0.667564 ms (FindLiveObjects: 0.089806 ms CreateObjectMapping: 0.046614 ms MarkObjects: 0.441764 ms  DeleteObjects: 0.086813 ms)
+Unloading 51 unused Assets to reduce memory usage. Loaded Objects now: 312.
+Total: 0.307054 ms (FindLiveObjects: 0.025659 ms CreateObjectMapping: 0.017961 ms MarkObjects: 0.191160 ms  DeleteObjects: 0.071417 ms)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1560)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1713)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.530288 ms
+
+Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 312.
+Total: 0.201851 ms (FindLiveObjects: 0.032073 ms CreateObjectMapping: 0.016250 ms MarkObjects: 0.148822 ms  DeleteObjects: 0.004276 ms)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1560)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1713)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.028503 ms
+
+Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 312.
+Total: 0.208266 ms (FindLiveObjects: 0.022665 ms CreateObjectMapping: 0.016678 ms MarkObjects: 0.163790 ms  DeleteObjects: 0.004704 ms)
+
+Collision: Untagged
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Collision: Untagged
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Collision: Untagged
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Collision: Untagged
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Collision: Untagged
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Collision: Untagged
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Collision: Untagged
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Collision: Untagged
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Collision: Untagged
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
 
 Collision: Untagged
  
