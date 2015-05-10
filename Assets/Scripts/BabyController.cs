@@ -2,22 +2,7 @@
 using System.Collections;
 
 
-public class Weapon
-{
-    public GameObject weapon;
-    public int ammo = 0;
-    public float fireRate = 1;
-
-    void shoot()
-    {
-        if (ammo > 0)
-            ammo--;
-    }
-
-}
-
-
-public class PlayerController : MonoBehaviour
+public class BabyController : MonoBehaviour
 {
 
     public float speed;
@@ -36,8 +21,8 @@ public class PlayerController : MonoBehaviour
     public Sprite WeaponSprite;
 
     private bool facingRight = true;
-    
-    
+
+
     private Animator anim;
 
     private float nextJump;
@@ -71,7 +56,7 @@ public class PlayerController : MonoBehaviour
             nextJump = Time.time;
         }
 
-        int dir=1;
+        int dir = 1;
         if (!facingRight)
         {
             dir = -1;
@@ -79,9 +64,9 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            if(hasWeapon)
+            if (hasWeapon)
             {
-                if(weapon.ammo != 0)
+                if (weapon.ammo != 0)
                 {
 
                     Quaternion g = WeaponSpawn.transform.rotation;
@@ -102,7 +87,7 @@ public class PlayerController : MonoBehaviour
                 }
             }
         }
-   
+
         this.transform.Translate(movement);
     }
 
@@ -160,9 +145,9 @@ public class PlayerController : MonoBehaviour
             drawable = false;
             Destroy(weapon.weapon);
 
-            if(!hasWeapon)
+            if (!hasWeapon)
             {
-                if(bag != null)
+                if (bag != null)
                     bag = this.gameObject.GetComponentsInChildren<SpriteRenderer>();
 
                 for (int i = 0; i < 3; i++)
@@ -188,9 +173,9 @@ public class PlayerController : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D coll)
     {
-        if(coll.gameObject.tag == "Present")
+        if (coll.gameObject.tag == "Present")
         {
-            Instantiate(helmet,coll.transform.position, coll.transform.rotation);
+            Instantiate(helmet, coll.transform.position, coll.transform.rotation);
             Destroy(coll.gameObject);
             Application.LoadLevel("Menue");
         }
@@ -203,15 +188,15 @@ public class PlayerController : MonoBehaviour
 
             if (bag != null)
                 bag = this.gameObject.GetComponentsInChildren<SpriteRenderer>();
-            
-            for (int i = 0; i < 3;i++ )
+
+            for (int i = 0; i < 3; i++)
             {
                 Debug.Log(bag[i].gameObject.tag);
                 if (((SpriteRenderer)bag[i]).tag == "HelmetSpawn")
                 {
                     Debug.Log("HelmetSprite");
                     bag[i].GetComponent<SpriteRenderer>().sprite = helmetSprite;
-              
+
                 }
             }
         }

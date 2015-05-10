@@ -132,8 +132,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: .200000003
   WeaponSpawn: {fileID: 178700}
+  helmetSpawn: {fileID: 0}
   gun: {fileID: 165430, guid: a0e627e643e689b4c893117ec066a254, type: 2}
-  anim: {fileID: 0}
+  WaterShot: {fileID: 0}
+  helmet: {fileID: 0}
+  doodle: {fileID: 174236, guid: 88cdf3202cf03a84da368aeb6c0c0696, type: 2}
+  msuccess1: {fileID: 170504, guid: ca789a60c307cf047a0feb622456fbb4, type: 2}
+  helmetSprite: {fileID: 0}
+  WeaponSprite: {fileID: 0}
 --- !u!212 &21239512
 SpriteRenderer:
   m_ObjectHideFlags: 1
