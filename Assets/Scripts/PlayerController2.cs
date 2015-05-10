@@ -1,195 +1,195 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿//using UnityEngine;
+//using System.Collections;
 
 
-public class Weapon2
-{
-    public GameObject weapon;
-    public int ammo = 0;
-    public float fireRate = 1;
+//public class Weapon2
+//{
+//    public GameObject weapon;
+//    public int ammo = 0;
+//    public float fireRate = 1;
 
-    void shoot()
-    {
-        if (ammo > 0)
-            ammo--;
-    }
+//    void shoot()
+//    {
+//        if (ammo > 0)
+//            ammo--;
+//    }
 
-}
-
-
-public class PlayerController2 : MonoBehaviour
-{
-
-    public float speed;
-
-    public GameObject WeaponSpawn;
-    public GameObject gun;
-    public Weapon weapon;
-    public GameObject WaterShot;
-
-    private bool facingRight = true;
-    public Animator anim;
-
-    private float nextJump;
-
-    private GameObject gun2;
-
-    // Use this for initialization
-    void Start()
-    {
-        weapon = new Weapon();
-        anim = GetComponent<Animator>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-        Vector2 movement = new Vector2(Input.GetAxis("Horizontal") * -1 * speed, 0f);
+//}
 
 
-        if (Time.time >= nextJump + 0.75)
-        {
-            this.transform.Translate(new Vector2(0f, Input.GetAxis("Vertical") * 2));
-            nextJump = Time.time;
-        }
+//public class PlayerController2 : MonoBehaviour
+//{
 
-        if (Input.GetMouseButtonDown(0))
-        {
-            if (weapon.weapon != null)
-            {
-                if (this.weapon.weapon != null & WeaponSpawn != null)
-                {
-                    if (weapon.ammo != 0)
-                    {
-                        Instantiate(this.WaterShot, WeaponSpawn.transform.position, WeaponSpawn.transform.rotation);
-                        this.weapon.ammo--;
-                    }
+//    public float speed;
 
-                }
-            }
-            //fire
-        }
+//    public GameObject WeaponSpawn;
+//    public GameObject gun;
+//    public Weapon weapon;
+//    public GameObject WaterShot;
 
+//    private bool facingRight = true;
+//    public Animator anim;
 
-        float move = Mathf.Abs(Input.GetAxis("Horizontal")),
-            moveX = Input.GetAxis("Horizontal");
+//    private float nextJump;
 
-        if (moveX > 0 && !facingRight)
-        {
-            Flip();
+//    private GameObject gun2;
 
-            if (weapon != null)
-                if (weapon.weapon != null)
-                    weapon.weapon.transform.Translate(new Vector2(movement.x + 8 * 20, movement.y));
-        }
-        else if (moveX < 0 && facingRight)
-        {
-            Flip();
+//    // Use this for initialization
+//    void Start()
+//    {
+//        weapon = new Weapon();
+//        anim = GetComponent<Animator>();
+//    }
 
-            if (weapon != null)
-                if (weapon.weapon != null)
-                    weapon.weapon.transform.Translate(new Vector2(movement.x - 8 * 20, movement.y));
-        }
+//    // Update is called once per frame
+//    void Update()
+//    {
+
+//        Vector2 movement = new Vector2(Input.GetAxis("Horizontal") * -1 * speed, 0f);
 
 
+//        if (Time.time >= nextJump + 0.75)
+//        {
+//            this.transform.Translate(new Vector2(0f, Input.GetAxis("Vertical") * 2));
+//            nextJump = Time.time;
+//        }
 
-        this.transform.Translate(movement);
-    }
+//        if (Input.GetMouseButtonDown(0))
+//        {
+//            if (weapon.weapon != null)
+//            {
+//                if (this.weapon.weapon != null & WeaponSpawn != null)
+//                {
+//                    if (weapon.ammo != 0)
+//                    {
+//                        Instantiate(this.WaterShot, WeaponSpawn.transform.position, WeaponSpawn.transform.rotation);
+//                        this.weapon.ammo--;
+//                    }
 
-
-    void FixedUpdate()
-    {
-
-        //Vector2 movement = new Vector2(Input.GetAxis("Horizontal") * -1 * speed, 0f);
-
-        float move = Mathf.Abs(Input.GetAxis("Horizontal")),
-            moveX = Input.GetAxis("Horizontal");
-
-        //if (Time.time >= nextJump + 0.75)
-        //{
-        //    this.transform.Translate(new Vector2(0f, Input.GetAxis("Vertical") * 2));
-        //    nextJump = Time.time;
-        //}
-
-        if (Input.GetMouseButtonDown(0))
-        {
-            //Instantiate()
-            //fire
-        }
-
-        anim.SetFloat("speed", move);
-
-        anim.SetBool("haveItem", false);
+//                }
+//            }
+//            //fire
+//        }
 
 
-        if (weapon.ammo == 0)
-        {
-            anim.SetBool("haveItem", false);
-        }
-        else
-        {
-            anim.SetBool("haveItem", true);
-        }
+//        float move = Mathf.Abs(Input.GetAxis("Horizontal")),
+//            moveX = Input.GetAxis("Horizontal");
 
-        if (moveX > 0 && !facingRight)
-        {
-            Flip();
-        }
-        else if (moveX < 0 && facingRight)
-        {
-            Flip();
-        }
+//        if (moveX > 0 && !facingRight)
+//        {
+//            Flip();
 
+//            if (weapon != null)
+//                if (weapon.weapon != null)
+//                    weapon.weapon.transform.Translate(new Vector2(movement.x + 8 * 20, movement.y));
+//        }
+//        else if (moveX < 0 && facingRight)
+//        {
+//            Flip();
 
-        if (weapon != null)
-            if (weapon.weapon != null)
-            {
-                weapon.weapon.transform.position = WeaponSpawn.transform.position;
-            }
-
-        // this.transform.Translate(movement);
+//            if (weapon != null)
+//                if (weapon.weapon != null)
+//                    weapon.weapon.transform.Translate(new Vector2(movement.x - 8 * 20, movement.y));
+//        }
 
 
-    }
 
-    void Flip()
-    {
-        facingRight = !facingRight;
-        Vector2 theScale = transform.localScale;
-        theScale.x *= -1;
-        transform.localScale = theScale;
-        theScale = weapon.weapon.transform.localScale;
-        theScale.x *= -1;
-        // theScale.y *= -1;
-        weapon.weapon.transform.localScale = theScale;
-
-    }
+//        this.transform.Translate(movement);
+//    }
 
 
-    public void setWeapon(string Bez)
-    {
-        if (Bez == "Watergun")
-        {
-            Debug.Log(gun);
-            Debug.Log(WeaponSpawn);
-            Destroy(weapon.weapon);
-            weapon.weapon = (GameObject)Instantiate(gun, WeaponSpawn.transform.position, WeaponSpawn.transform.rotation);
-            weapon.weapon.transform.localScale = new Vector3(0.4f, 0.4f, 0.4f);
+//    void FixedUpdate()
+//    {
+
+//        //Vector2 movement = new Vector2(Input.GetAxis("Horizontal") * -1 * speed, 0f);
+
+//        float move = Mathf.Abs(Input.GetAxis("Horizontal")),
+//            moveX = Input.GetAxis("Horizontal");
+
+//        //if (Time.time >= nextJump + 0.75)
+//        //{
+//        //    this.transform.Translate(new Vector2(0f, Input.GetAxis("Vertical") * 2));
+//        //    nextJump = Time.time;
+//        //}
+
+//        if (Input.GetMouseButtonDown(0))
+//        {
+//            //Instantiate()
+//            //fire
+//        }
+
+//        anim.SetFloat("speed", move);
+
+//        anim.SetBool("haveItem", false);
 
 
-            if (facingRight)
-            {
-                Vector2 theScale;
-                theScale = weapon.weapon.transform.localScale;
-                theScale.x *= -1;
-                weapon.weapon.transform.localScale = theScale;
-            }
+//        if (weapon.ammo == 0)
+//        {
+//            anim.SetBool("haveItem", false);
+//        }
+//        else
+//        {
+//            anim.SetBool("haveItem", true);
+//        }
 
-            //gun.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
-            weapon.ammo = 5;
-        }
-    }
+//        if (moveX > 0 && !facingRight)
+//        {
+//            Flip();
+//        }
+//        else if (moveX < 0 && facingRight)
+//        {
+//            Flip();
+//        }
 
 
-}
+//        if (weapon != null)
+//            if (weapon.weapon != null)
+//            {
+//                weapon.weapon.transform.position = WeaponSpawn.transform.position;
+//            }
+
+//        // this.transform.Translate(movement);
+
+
+//    }
+
+//    void Flip()
+//    {
+//        facingRight = !facingRight;
+//        Vector2 theScale = transform.localScale;
+//        theScale.x *= -1;
+//        transform.localScale = theScale;
+//        //theScale = //weapon.weapon.transform.localScale;
+//        //theScale.x *= -1;
+//        // theScale.y *= -1;
+//       // weapon.weapon.transform.localScale = theScale;
+
+//    }
+
+
+//    public void setWeapon(string Bez)
+//    {
+//        if (Bez == "Watergun")
+//        {
+//            Debug.Log(gun);
+//            Debug.Log(WeaponSpawn);
+//            Destroy(weapon.weapon);
+//            weapon.weapon = (GameObject)Instantiate(gun, WeaponSpawn.transform.position, WeaponSpawn.transform.rotation);
+//            weapon.weapon.transform.localScale = new Vector3(0.4f, 0.4f, 0.4f);
+
+
+//            if (facingRight)
+//            {
+//                Vector2 theScale;
+//                theScale = weapon.weapon.transform.localScale;
+//                theScale.x *= -1;
+//                weapon.weapon.transform.localScale = theScale;
+//            }
+
+//            //gun.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+//            weapon.ammo = 5;
+//        }
+//    }
+
+
+//}
