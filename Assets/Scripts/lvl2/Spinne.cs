@@ -9,7 +9,7 @@ public class Spinne : MonoBehaviour {
         if (coll.gameObject.tag == "Player")
         {
 
-            Application.LoadLevel("2level");
+            Application.LoadLevel("level-3");
 
         }
     }
