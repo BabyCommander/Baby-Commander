@@ -3,9 +3,10 @@ using System.Collections;
 
 public class DestroyScript : MonoBehaviour {
 
-	
-	void OnTriggerExit2D(Collider2D other)
+
+	void OnTriggerExit2D(Collider2D coll)
 	{
-		Destroy(other.gameObject);
+		if(coll.gameObject.tag != "Shot")
+			Destroy(coll.gameObject.GetComponent<Rigidbody2D>());
 	}
 }
