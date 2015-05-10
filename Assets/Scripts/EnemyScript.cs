@@ -3,7 +3,7 @@ using System.Collections;
 
 public class EnemyScript : MonoBehaviour {
 
-	public int life;
+	public int health;
 	public GameObject Loot;
 
 
@@ -23,19 +23,25 @@ public class EnemyScript : MonoBehaviour {
 	{
 		if (coll.gameObject.tag == "Shot")
 		{   
-
-			if(life < 1)
+			if(health < 1)
 			{
 				Instantiate(Loot, transform.position, transform.rotation);
 				Destroy(this.gameObject);
 
 			}
-				
-
-
-
-			life--;
+			health--;
 		}
+        else if (coll.gameObject.tag == "Player")
+        {
+            PlayerController tmp = coll.gameObject.GetComponent<PlayerController>();
+            tmp.health --;
+
+            if (tmp.health < 0)
+                Application.LoadLevel("Menue");
+
+            
+
+        }
 
 	}
 

@@ -28,21 +28,18 @@ public class PlayerController : MonoBehaviour
     public Weapon weapon;
     public GameObject WaterShot;
     public GameObject helmet;
-
     public Sprite helmetSprite;
     public Sprite WeaponSprite;
 
+
+
+    // private GameObject gun2;
     private bool facingRight = true;
-    
-    
     private Animator anim;
-
     private float nextJump;
-
-    private GameObject gun2;
-
     private SpriteRenderer[] bag;
     private bool hasWeapon;
+    public int health;
 
     // Use this for initialization
     void Start()
@@ -51,6 +48,7 @@ public class PlayerController : MonoBehaviour
         hasWeapon = false;
         weapon = new Weapon();
         anim = GetComponent<Animator>();
+        health = 3;
     }
 
     // Update is called once per frame
@@ -76,7 +74,6 @@ public class PlayerController : MonoBehaviour
             {
                 if(weapon.ammo != 0)
                 {
-
                     Quaternion g = WeaponSpawn.transform.rotation;
                     Quaternion h = new Quaternion(WeaponSpawn.transform.rotation.x, WeaponSpawn.transform.rotation.y, WeaponSpawn.transform.rotation.z, dir * WeaponSpawn.transform.rotation.w);
                     Instantiate(this.WaterShot, WeaponSpawn.transform.position, h);
@@ -84,7 +81,8 @@ public class PlayerController : MonoBehaviour
                 }
             }       
         }
-   
+
+        //this.GetComponent<Rigidbody2D>().AddForce(movement);
         this.transform.Translate(movement);
     }
 
